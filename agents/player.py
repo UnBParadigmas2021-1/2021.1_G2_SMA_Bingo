@@ -1,7 +1,8 @@
 from pade.core.agent import Agent
 from pade.misc.utility import display_message
 from agents.card import Card
-import sys
+from twisted.internet import reactor
+
 
 class Player(Agent):
     def __init__(self, aid):
@@ -13,5 +14,5 @@ class Player(Agent):
         self.card.check_number(message.content)
         if(self.card.check_bingo()):
             display_message(self.aid.localname, "Bingoooooo")
-
+            reactor.callFromThread(reactor.stop)
         
