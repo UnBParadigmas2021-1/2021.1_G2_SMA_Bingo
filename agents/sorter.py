@@ -17,15 +17,16 @@ class Sorter(Agent):
     def __init__(self, aid, players):
         super(Sorter, self).__init__(aid=aid, debug=False)
         self.sorted_numbers = []
-        self.behaviours.append(ComportTemporal(self, 5.0))
+        self.behaviours.append(ComportTemporal(self, 1.0))
         self.players = players.copy()
-
     
     def sort_number(self):
+        if(len(self.sorted_numbers) == 75):
+            self.sorted_numbers = []
         sorted_number = random.randint(1, 75)
         display_message(self.aid.localname, sorted_number)
         display_message(self.aid.localname, self.sorted_numbers)
-        while sorted_number in self.sorted_numbers:
+        while (sorted_number in self.sorted_numbers):
             sorted_number = random.randint(1, 75)
         self.sorted_numbers.append(sorted_number)
         message = ACLMessage(ACLMessage.INFORM)

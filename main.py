@@ -18,18 +18,13 @@ if __name__ == '__main__':
   players_name = []
   port = int(argv[1]) 
   for i in range(number_of_players):
-    ## Criando cartelas do bingo
-    card_name = 'agent_card_{}@localhost:{}'.format(port, port)
-    agent_card = Card(AID(name=card_name))
-    port+=1
-    agents.append(agent_card)
     ## Criando jogadores do bingo
     player_name = 'agent_player_{}@localhost:{}'.format(port, port)
     players_name.append(player_name)
-    agent_player = Player(AID(player_name), agent_card)
+    agent_player = Player(AID(player_name))
     agents.append(agent_player)
     port+=1
-    ## Criando globo sorteador
+  ## Criando globo sorteador
   sorter_name = 'agent_sorter_{}@localhost:{}'.format(port, port)
   agente_sorter = Sorter(AID(name=sorter_name), players_name)
   agents.append(agente_sorter)

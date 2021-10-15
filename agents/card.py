@@ -1,16 +1,10 @@
-from pade.core.agent import Agent
 import random
 
-class Card(Agent):
-  def __init__(self, aid):
-    super(Card, self).__init__(aid=aid, debug=False)
+class Card():
+  def __init__(self):
     self.numbers = [[0 for x in range(5)] for y in range(5)]
     self.count = 0
     self.fill_matriz()
-    print(self.numbers)
-
-  def on_start(self):
-    super(Card, self).on_start()
   
   
   def fill_matriz(self):
@@ -29,7 +23,6 @@ class Card(Agent):
         if self.numbers[i][j] == number:
           self.numbers[i][j] = 0
           self.count += 1
-    
     print(self.numbers)
 
   def check_bingo(self):
