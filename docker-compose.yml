@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  pade:
+    build: .
+    ports:
+      - "3000:3000"
+    command: python3 main.py
+    volumes:
+      - .:/app
