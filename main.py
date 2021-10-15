@@ -4,6 +4,7 @@ from pade.acl.aid import AID
 from sys import argv
 from agents.card import Card
 from agents.player import Player
+from agents.sorter import Sorter
 
 class AgenteHelloWorld(Agent):
   def __init__(self, aid):
@@ -14,6 +15,7 @@ if __name__ == '__main__':
   agents = list()
   c = 0
   number_of_players = 3
+  players_name = []
   port = int(argv[1]) 
   for i in range(number_of_players):
     ## Criando cartelas do bingo
@@ -23,8 +25,14 @@ if __name__ == '__main__':
     agents.append(agent_card)
     ## Criando jogadores do bingo
     player_name = 'agent_player_{}@localhost:{}'.format(port, port)
+    players_name.append(player_name)
     agent_player = Player(AID(player_name), agent_card)
     agents.append(agent_player)
     port+=1
+    ## Criando globo sorteador
+  sorter_name = 'agent_sorter_{}@localhost:{}'.format(port, port)
+  agente_sorter = Sorter(AID(name=sorter_name), players_name)
+  agents.append(agente_sorter)
+  port+=1
 
   start_loop(agents)
