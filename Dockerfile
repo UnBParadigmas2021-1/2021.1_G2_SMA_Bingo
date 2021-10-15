@@ -1,9 +1,9 @@
-FROM python:3.8.11
-
-COPY requirements.txt /app/requirements.txt
+FROM victorcmoura/pade:paradigmas
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip3.7 install websockets
 
 COPY . /app
+
+CMD pade --config_file pade_config.json
