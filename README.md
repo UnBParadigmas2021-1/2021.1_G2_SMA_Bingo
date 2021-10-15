@@ -51,4 +51,4 @@ Adicione 1 ou mais vídeos com a execução do projeto.
 Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
 
 ## Fontes
-Caso utilize materiais de terceiros, referencie-os adequadamente.
+Foi utilizado o docker desse projeto, para rodar nosso programa: https://github.com/Paradigmas2018-2/inteliLamps (inteliLamps)
