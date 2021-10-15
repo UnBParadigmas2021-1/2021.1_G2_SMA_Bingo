@@ -20,10 +20,10 @@ if __name__ == '__main__':
     card_name = 'agent_card_{}@localhost:{}'.format(port, port)
     agent_card = Card(AID(name=card_name))
     port+=1
+    agents.append(agent_card)
     ## Criando jogadores do bingo
     player_name = 'agent_player_{}@localhost:{}'.format(port, port)
-    agent_player = Player(AID(player_name))
-    agents.append(agent_card)
+    agent_player = Player(AID(player_name), agent_card)
     agents.append(agent_player)
     port+=1
 

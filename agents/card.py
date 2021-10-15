@@ -1,9 +1,5 @@
-from pade.acl.aid import AID
-from pade.acl.messages import ACLMessage
 from pade.core.agent import Agent
 import random
-
-from pade.misc.utility import display_message
 
 class Card(Agent):
   def __init__(self, aid):
@@ -15,11 +11,7 @@ class Card(Agent):
 
   def on_start(self):
     super(Card, self).on_start()
-    # display_message(self.aid.localname, 'Enviando Mensagem')
-    # message = ACLMessage(ACLMessage.INFORM)
-    # message.add_receiver(AID('player'))
-    # message.set_content('Ola')
-    # self.send(message)
+  
   
   def fill_matriz(self):
     matriz = random.sample(range(1, 75), 25)
