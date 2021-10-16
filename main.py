@@ -2,7 +2,6 @@ from pade.misc.utility import display_message, start_loop
 from pade.core.agent import Agent
 from pade.acl.aid import AID
 from sys import argv
-from agents.card import Card
 from agents.player import Player
 from agents.sorter import Sorter
 

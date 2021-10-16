@@ -1,6 +1,6 @@
 from pade.core.agent import Agent
 from pade.misc.utility import display_message
-from agents.card import Card
+from classes.card import Card
 from twisted.internet import reactor
 
 
