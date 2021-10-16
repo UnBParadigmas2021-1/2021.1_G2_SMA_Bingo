@@ -16,8 +16,18 @@
 ## Sobre 
 Projeto simulador de um bingo em Python, utilizando a biblioteca PADE para desenvolvimento de sistemas multiagentes.
 
+Tivemos a abstração inicial do projeto baseado no seguinte esquema:
+![image](https://user-images.githubusercontent.com/17153869/137568243-e568daf8-c524-4a55-8f9b-f54dd0584b53.png)
+
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+Ao executar é mostrado as seguintes mensagens referentes ao framework PADE:
+![image](https://user-images.githubusercontent.com/17153869/137568206-2e931968-a408-4167-a101-095f3ce4f7e4.png)
+
+Em seguida, são mostrados logs relacionados à logica do jogo, e também a pontuação dos jogadores:
+![image](https://user-images.githubusercontent.com/17153869/137568218-c43ab58f-64a6-4b97-bcb2-59c5ec7acf90.png)
+
+Por fim, caso um jogador ganhe, é mostrado a mensagem "Bingoooo"..
+![image](https://user-images.githubusercontent.com/17153869/137568226-a8167100-8a1b-45a8-aae4-ddccd4dce71c.png)
 
 ## Instalação 
 **Linguagens**: Python<br>
@@ -31,10 +41,10 @@ docker-compose up --build
 ```
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
+Para acessar o vídeo [Clique Aqui](https://youtu.be/_dSsmgnqUvo)
 
 ## Fontes
-Foi utilizado o docker desse projeto, para rodar nosso programa: https://github.com/Paradigmas2018-2/inteliLamps (inteliLamps)
+- Foi utilizado o docker desse projeto, para rodar nosso programa:  [inteliLamps](https://github.com/Paradigmas2018-2/inteliLamps)
+- Foi utilizado como exemplo para encerrar a execução do código, o projeto: [SMA - Leilão](https://github.com/UnBParadigmas2020-2/2020.2_G4_SMA_Leilao)
+- Foi utilizado também, a documentação do PADE como exemplo: [Documentação PADE](https://pade.readthedocs.io/pt_BR/latest/)
